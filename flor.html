@@ -1,0 +1,24 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    pincel.fillStyle = "lightgray";
+    pincel.fillRect(0, 0, 600, 400);
+
+    function dibujarCirculo(x, y,color,radio=20) {
+
+        pincel.fillStyle = color;
+        pincel.beginPath();
+        pincel.arc(x, y, radio, 0, 2*Math.PI);
+        pincel.fill();
+    }
+
+    dibujarCirculo(300,200,"red")
+    dibujarCirculo(300,160,"yellow")
+    dibujarCirculo(340,200,"black")
+    dibujarCirculo(300,240,"blue")
+    dibujarCirculo(260,200,"orange")
+    
+</script>

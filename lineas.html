@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+<canvas class="myCanvas" width="600" height="400">
+
+</canvas>
+
+<script>
+
+ var canvas = document.querySelector(".myCanvas");
+ var pincel = canvas.getContext("2d")
+
+
+ function dibujarCuadado(ejeX=0,ejeY=0,color="green",width=50,height=50,){
+    pincel.fillStyle=color;
+    pincel.fillRect(ejeX,ejeY,width,height);
+    pincel.strokeStyle='black';
+    pincel.strokeRect(ejeX,ejeY,width,height);
+ }
+ 
+
+for(var i=0; i<600; i+=50){
+    dibujarCuadado(i,0,"red")
+    dibujarCuadado(i,50,"yellow")
+    dibujarCuadado(i,100,"green")  
+}  
+/*
+dibujarCuadado(50,0)
+dibujarCuadado(100,0)
+dibujarCuadado(150,0) 
+ */
+
+
+/*
+dibujarCuadado(0,50,"#58d68d")//verde
+dibujarCuadado(0,100,"#f4d03f")//amarillo
+dibujarCuadado(0,150,"#cd6155")//rojo
+*/
+
+ 
+
+</script>
